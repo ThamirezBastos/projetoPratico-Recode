@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Full Stack Eletro</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div>
+        <table class="menu">
+            <tr>
+                <td><a href="index.html">
+                        <img src="./imagens_fullstack/logo.jpg" alt="full stack eletro" width="100px">
+                    </a>
+                </td>
+                <td><a href="produtos.html">Produtos</a></td>
+                <td><a href="loja.html">Nossas Lojas</a></td>
+                <td><a href="contato.html">Contato</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <h2 class="text_index">Produtos</h2>
+
+    <hr>
+    <div class="menu_produtos">
+        <h3>Categorias</h3>
+        <ul>
+            <li onclick="exibirTodos()">Todos (12)</li>
+            <li onclick="exibirCateg('geladeira')">Geladeira (3)</li>
+            <li onclick="exibirCateg('fogao')">Fogão (2)</li>
+            <li onclick="exibirCateg('microondas')">Micro-ondas (3)</li>
+            <li onclick="exibirCateg('lavaroupas')">Máquina de lavar (2)</li>
+            <li onclick="exibirCateg('lavaloucas')">Lava-louças (2)</li>
+        </ul>
+    </div>
+
+
+    <div class="cat_produtos">
+        <div class="produtos" id="geladeira">
+            <img src="./imagens_fullstack/geladeira_brastemp.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Geladeira Frost Free Brastemp Side Inverse 540 Litros</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 6.389,00</p>
+                <p class="preco_final">R$ 5.019,00</p>
+            </div>
+        </div>
+        <div class="produtos" id="geladeira">
+            <img src="./imagens_fullstack/geladeira_brastemp_branca.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Geladeira Frost Free Brastemp Branca 375 Litros</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 2.068,60</p>
+                <p class="preco_final">R$ 1.910,90</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="geladeira">
+            <img src="./imagens_fullstack/geladeira_consul.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Geladeira Frost Free Consul Prata 340 Litros</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 2.199,99</p>
+                <p class="preco_final">R$ 2.069,00</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="fogao">
+            <img src="./imagens_fullstack/fogao_inox.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Fogão 4 Bocas Consul Inox com Mesa de Vidro</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 1.299,99</p>
+                <p class="preco_final">R$ 1.129,00</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="fogao">
+            <img src="./imagens_fullstack/fogao_monaco.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Fogão 4 Bocas Atlas Monaco com Acendimento Automático</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 699,99</p>
+                <p class="preco_final">R$ 519,70</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="microondas">
+            <img src="./imagens_fullstack/microondas_consul.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Micro-ondas Consul Prateado 32L Inox 220v</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 589,99</p>
+                <p class="preco_final">R$ 409,88</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="microondas">
+            <img src="./imagens_fullstack/microondas_espelhado.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Micro-ondas Philco Inox 25L Espelhado 220v</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 508,70</p>
+                <p class="preco_final">R$ 464,00</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="microondas">
+            <img src="./imagens_fullstack/microondas_eletrolux.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Micro-ondas Eletrolux 20L Branco 127v</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 459,99</p>
+                <p class="preco_final">R$ 436,05</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="lavaloucas">
+            <img src="./imagens_fullstack/lavalouca_eletrolux.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Lava-Louça Eletrolux Inox com Painel Blue Touch</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 3599,00</p>
+                <p class="preco_final">R$ 2.799,00</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="lavaloucas">
+            <img src="./imagens_fullstack/lavalouca_brastemp.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Lava-Louça Brastemp Compacta Branca 127V</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 1.970,59</p>
+                <p class="preco_final">R$ 1.730,61</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="lavaroupas">
+            <img src="./imagens_fullstack/lavadora_brastemp.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Máquina de Lavar Brastemp 11Kg Turbo Perfomance</p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 1.699,00</p>
+                <p class="preco_final">R$ 1.214,10</p><br>
+            </div>
+        </div>
+        <div class="produtos" id="lavaroupas">
+            <img src="./imagens_fullstack/lavadora_philco.jpg" width="140px" onmouseover="destaque(this)"
+                onmouseout="resizeimg(this)">
+            <br>
+            <p>Máquina de Lavar Philco Lava&Seca 12Kg </p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ 2.399,00</p>
+                <p class="preco_final">R$ 2.179,90</p><br>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br><br><br><br><br>
+
+    <hr>
+
+
+    <div class="formas_pagamento">
+        <p>Formas de Pagamento</p>
+        <img src="imagens_fullstack/formapag.jpg" alt="Formas de Pagamento">
+    </div>
+
+    <footer>&copy; Thamirez Bastos</footer>
+
+</body>
+
+</html>

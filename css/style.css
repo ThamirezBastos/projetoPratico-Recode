@@ -1,0 +1,126 @@
+/* configurações gerais */
+
+body {
+    font-family: Arial, Tahoma, Verdana;
+    width: 100%;
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    background-color: red;
+}
+
+.menu td {
+    width: 20%;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Tahoma, Verdana;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.formas_pagamento {
+    color: red;
+    text-align: center;
+    width: 100%;
+}
+
+.formas_pagamento img {
+    width: 400px;
+    height: 80px;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin: 1%;
+}
+
+/* configurações index */
+
+.text_index {
+    margin-left: 2%;
+}
+
+/* configurações produtos */
+
+.menu_produtos {
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+    width: 16%;
+    cursor: pointer;
+}
+
+.menu_produtos li {
+    list-style-type: none;
+}
+
+.cat_produtos {
+    margin-left: 20%;
+}
+
+.produtos {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    cursor: zoom-in;
+}
+
+.preco_ant {
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.preco_final {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* configurações loja */
+
+.end_loja {
+    width: 20%;
+    text-align: center;
+}
+
+/* configurações contato */
+
+.contato {
+    width: 100%;
+    text-align: center;
+}
+
+.contato img {
+    vertical-align: middle;
+}
+
+.contato_info {
+    font-size: 16px;
+    content: 0;
+    display: inline;
+}
+
+form {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+textarea {
+    width: 400px;
+}
+
+.send {
+    cursor: pointer;
+}
