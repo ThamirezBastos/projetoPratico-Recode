@@ -1,6 +1,6 @@
 
 function exibirCateg(categoria) {
-        let elementos = document.getElementsByClassName("produtos");
+    let elementos = document.getElementsByClassName("produtos");
     console.log(elementos[0].id);
     console.log(categoria);
     for (var i = 0; i < elementos.length; i++) {
@@ -20,20 +20,14 @@ let exibirTodos = () => {
 }
 
 let destaque = (imagem) => {
-    console.log(imagem);
-    if (imagem.width == 240)
-        imagem.width = 140;
-    else if (imagem.width == 140) {
-        imagem.width = 240;
-    }
+    imagem.width == 240 ? imagem.width = 140 : imagem.width = 240
+}
 
-}
-let resizeimg = (imagem) => {
-    if (imagem.width == 240)
-        imagem.width = 140;
-    else if (imagem.width == 140) {
-        imagem.width = 240;
-    }
-}
+// if (imagem.width == 240)
+    //     imagem.width = 140;
+    // else if (imagem.width == 140) {
+    //     imagem.width = 240;
+    // }
+
 
 
