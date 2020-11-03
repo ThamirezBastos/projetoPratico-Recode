@@ -33,7 +33,7 @@ if (!$conn) {
     <h2 class="text_index">Produtos</h2>
 
     <hr>
-    <div class="menu_produtos">
+    <div class="menu_produtos" style="height: 200vh">
         <h3>Categorias</h3>
         <ul>
             <li onclick="exibirTodos()">Todos (12)</li>
@@ -51,19 +51,16 @@ if (!$conn) {
     if ($result->num_rows > 0) {
         while ($rows = $result->fetch_assoc()) {
     ?>
-           
-                <div class="produtos" id="<?php echo $rows["categoria"]; ?>">
-                    <img src="<?php echo $rows["nomeimagem"]; ?>" width="140px" onmouseover="destaque(this)" onmouseout="destaque(this)">
-                    <br>
-                    <p><?php echo $rows["descricao_produto"]; ?></p>
-                    <div>
-                        <hr>
-                        <p class="preco_ant">R$ <?php echo $rows["preco_inicial"]; ?></p>
-                        <p class="preco_final">R$ <?php echo $rows["preco_desconto"]; ?></p>
-                    </div>
-                </div>
-           
-
+        <div class="produtos" id="<?php echo $rows["categoria"]; ?>">
+            <img src="<?php echo $rows["nomeimagem"]; ?>" width="140px" onmouseover="destaque(this)" onmouseout="destaque(this)">
+            <br>
+            <p><?php echo $rows["descricao_produto"]; ?></p>
+            <div>
+                <hr>
+                <p class="preco_ant">R$ <?php echo $rows["preco_inicial"]; ?></p>
+                <p class="preco_final">R$ <?php echo $rows["preco_desconto"]; ?></p>
+            </div>
+        </div>           
     <?php
         }
     } else {
@@ -88,7 +85,6 @@ if (!$conn) {
     </div>
 
     <footer>&copy; Thamirez Bastos</footer>
-
 </body>
 
 </html>
