@@ -10,21 +10,10 @@
 </head>
 
 <body>
+    <?php
+    include_once('menu.html');
 
-    <div>
-        <table class="menu">
-            <tr>
-                <td><a href="index.html">
-                        <img src="./imagens_fullstack/logo.jpg" alt="full stack eletro" width="100px">
-                    </a>
-                </td>
-                <td><a href="produtos.html">Produtos</a></td>
-                <td><a href="loja.html">Nossas Lojas</a></td>
-                <td><a href="contato.html">Contato</a></td>
-            </tr>
-        </table>
-    </div>
-
+    ?>
 
     <h2 class="text_index">Nossas Lojas</h2>
 

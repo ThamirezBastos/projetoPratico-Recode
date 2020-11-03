@@ -10,20 +10,10 @@
 </head>
 
 <body>
-
-    <div>
-        <table class="menu">
-            <tr>
-                <td><a href="index.html">
-                        <img src="./imagens_fullstack/logo.jpg" alt="full stack eletro" width="100px">
-                    </a>
-                </td>
-                <td><a href="produtos.html">Produtos</a></td>
-                <td><a href="loja.html">Nossas Lojas</a></td>
-                <td><a href="contato.html">Contato</a></td>
-            </tr>
-        </table>
-    </div>
+    <?php 
+    include_once('menu.html');
+    
+    ?>
 
     <h2 class="text_index">
         Sejam Bem Vindo(a)!
@@ -47,8 +37,8 @@
     </div>
 
 
-   <footer>&copy; Thamirez Bastos</footer>
-    
+    <footer>&copy; Thamirez Bastos</footer>
+
 
 </body>
 
