@@ -46,3 +46,11 @@ insert into pedidos values
 UPDATE pedidos SET valor_total = (valor_unitario * quantidade);
 
 SELECT * FROM pedidos;
+
+-- tabela comentarios para pagina de contato
+create table comentarios(
+id int primary key auto_increment,
+nome varchar(80),
+msg varchar (200),
+data datetime default now()
+);
