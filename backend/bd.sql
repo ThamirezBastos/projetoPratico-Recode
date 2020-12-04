@@ -1,11 +1,12 @@
+-- criação bd
 create database fullstackeletro
 default character set utf8
 default collate utf8_general_ci;
 
-
+-- tabela categorias pagina produtos
 create table produtos(
 id_produto int not null primary key auto_increment,
-categoria varchar(60) not null,
+id_categoria varchar(60) not null,
 descricao_produto varchar(100) not null,
 preco_inicial decimal (8,2) not null,
 preco_desconto decimal (8,2) not null,
@@ -26,10 +27,28 @@ insert into produtos values
 (default, 'lavaroupas', 'Lava-Roupas Brastemp 11Kg Turbo Perfomance', 1699.00, 1214.10, 'lavadora_brastemp.jpg', 'Brastemp'),
 (default, 'lavaroupas', 'Lava-Roupas Philco Lava&Seca 12Kg', 2399.00, 2179.90, 'lavadora_philco.jpg', 'Philco');
 
+-- tabela comentarios pagina contato
 create table comentarios(
 id int primary key auto_increment,
 nome varchar(80),
-email varchar(30) NOT null,
 msg varchar (200),
 data datetime default now()
 );
+
+
+-- tabela categorias pagina produtos
+create table categorias (
+
+id_categoria int not null primary key AUTO_INCREMENT,
+categoria varchar(60) not null
+
+) default charset = utf8;
+
+ALTER TABLE produtos ADD CONSTRAINT FOREIGN KEY (categoria) REFERENCES categorias (id_categoria);
+
+insert into categorias values 
+(default, 'Geladeira'),
+(default, 'Fogão'),
+(default, 'Microondas'),
+(default, 'Lava Roupas'),
+(default, 'Lava Louças');
