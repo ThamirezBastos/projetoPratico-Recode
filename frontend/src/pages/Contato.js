@@ -27,7 +27,6 @@ const Comentarios = () => {
             .then(res => res.json())
             .then(dados => console.log(dados))
         setRender(!render);
-        
 
         event.preventDefault();
 
@@ -38,15 +37,6 @@ const Comentarios = () => {
         setSenha("");
     }
     
-    // function cadastro(event) {
-    //     event.preventDefault();
-
-    //     // Lógica de cadastro
-    //     console.log("Cadastro efetuado!")
-
-    //     setEmail("");
-    //     setSenha("");
-    // }
     return (
 
         <div className="container mt-5">
