@@ -16,7 +16,7 @@ class Produto
     {
         $connection = Connection::getDb();
 
-        $stmt = $connection->query("SELECT * FROM produtos");
+        $stmt = $connection->query("SELECT * FROM produtos JOIN categorias ON produtos.id_categoria = categorias.id_categoria");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
