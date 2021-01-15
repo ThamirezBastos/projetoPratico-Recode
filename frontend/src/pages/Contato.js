@@ -7,7 +7,7 @@ const Comentarios = () => {
     const [senha, setSenha] = React.useState("");
 
     React.useEffect(async () => {
-        const url = " http://projetos/fullstackeletro/backend/coment.php";
+        const url = " http://localhost:3333/contato";
         const response = await fetch(url);
         setComentarios(await response.json());
     }, [render])
@@ -16,13 +16,15 @@ const Comentarios = () => {
         event.preventDefault();
         console.log(event.target)
 
-        const formData = new FormData(event.target)
-
-        const url = "http://projetos/fullstackeletro/backend/register-comment.php";
+        const formData =   {"nome": email, "msg": senha}
+        const url = "http://localhost:3333/contato";
 
         fetch(url, {
             method: "POST",
-            body: formData
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
         })
             .then(res => res.json())
             .then(dados => console.log(dados))
@@ -36,7 +38,7 @@ const Comentarios = () => {
         setEmail("");
         setSenha("");
     }
-    
+
     return (
 
         <div className="container mt-5">
@@ -64,13 +66,13 @@ const Comentarios = () => {
                 <div className="form-group mt-5">
                     <label for="exampleInputEmail1">Nome</label>
                     <input type="text" name="nome" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu nome" value={email}
-                    onChange={(event) => setEmail(event.target.value)}/>
+                        onChange={(event) => setEmail(event.target.value)} />
                     <small id="emailHelp" className="form-text text-muted">Nunca vamos compartilhar seu contato.</small>
                 </div>
                 <div className="form-group">
                     <label for="exampleInputPassword1"></label>
                     <input type="text" name="msg" className="form-control" id="exampleInputPassword1" placeholder="Sua Mensagem" value={senha}
-                    onChange={(event) => setSenha(event.target.value)} />
+                        onChange={(event) => setSenha(event.target.value)} />
                 </div>
                 <button type="submit" className="btn btn-danger">Enviar</button>
             </form>

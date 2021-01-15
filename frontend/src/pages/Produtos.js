@@ -4,7 +4,7 @@ const Produtos = () => {
   const [produto, setProduto] = React.useState([])
 
   React.useEffect(async () => {
-    const url = " http://projetos/fullstackeletro/backend/product.php";
+    const url = " http://localhost:3333/produtos";
     const response = await fetch(url)
     setProduto(await response.json())
   }, [])
